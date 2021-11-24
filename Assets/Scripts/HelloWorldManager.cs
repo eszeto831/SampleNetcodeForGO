@@ -30,7 +30,7 @@ namespace HelloWorld
         {
             System.DateTime epochStart = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
             var cur_time = (System.DateTime.UtcNow - epochStart).TotalMilliseconds;
-            Debug.Log("edmond :: test 3");
+            Debug.Log("edmond :: test 4");
             Debug.Log("edmond :: unity awake: " + cur_time);
             Screen.fullScreen = false;
         }
@@ -40,6 +40,7 @@ namespace HelloWorld
             // headless mode? then start the server
             // can't do this in Awake because Awake is for initialization.
             // some transports might not be ready until Start.
+            Application.targetFrameRate = 60;
 #if UNITY_SERVER
             NetworkManager.Singleton.StartServer();
 #endif
