@@ -7,9 +7,9 @@ namespace HelloWorld
     {
         void OnGUI()
         {
-            Debug.Log("edmond :: on GUI");
+            //Debug.Log("edmond :: on GUI");
 #if !UNITY_SERVER
-            Debug.Log("edmond :: please dont come in here for server build");
+            //Debug.Log("edmond :: please dont come in here for server build");
             GUILayout.BeginArea(new Rect(10, 10, 300, 300));
             if (!NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
             {
